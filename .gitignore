@@ -1,0 +1,3 @@
+# files and directories that we do not want to track
+*.zip
+data/
