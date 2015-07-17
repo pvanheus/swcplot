@@ -1,10 +1,15 @@
 # etherpad: http://j.mp/uct_swc_0715_2
 # code: http://j.mp/swcplot
 
+import sys
 import numpy
 import matplotlib.pyplot
 
-data = numpy.loadtxt(fname='data/inflammation-01.csv', delimiter=',')
+if len(sys.argv) != 2:
+  sys.exit("Expected the name of a data file to plot.")
+input_filename = sys.argv[0]
+
+data = numpy.loadtxt(fname=input_filename, delimiter=',')
 
 fig = matplotlib.pyplot.figure(figsize=(10.0, 3.0))
 
