@@ -7,7 +7,7 @@ import matplotlib.pyplot
 
 if len(sys.argv) != 2:
   sys.exit("Expected the name of a data file to plot.")
-input_filename = sys.argv[0]
+input_filename = sys.argv[1]
 
 data = numpy.loadtxt(fname=input_filename, delimiter=',')
 
